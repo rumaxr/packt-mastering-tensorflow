@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  tensorflow-jupyter:
+    image: tensorflow/tensorflow:1.13.1-py3-jupyter
+    volumes:
+      - ./notebooks:/tf
+    user: ${CURRENT_UID}
+    network_mode: host
